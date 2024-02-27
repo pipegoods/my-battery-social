@@ -17,4 +17,8 @@ Para desplegar este proyecto
 ```
 
 
+## TODO
 
+- Mejorar imagenes al compartir
+- Corregir CSS sin usar
+- Mejorar experiencia
