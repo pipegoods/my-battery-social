@@ -1,0 +1,125 @@
+.social-battery-container {
+  --border-color: #e6dac1;
+  position: relative;
+  background-color: black;
+  border-radius: 10px;
+  padding: 20px;
+  border: 4px solid var(--border-color);
+
+  & h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 38%;
+    right: -28px;
+    width: 20px;
+    height: 50px;
+    background-color: black;
+    border: 4px solid var(--border-color);
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.social-battery {
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+  height: 80px;
+
+  & input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    margin: 0;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    top: 45px;
+    left: 2px;
+    z-index: 2;
+  }
+
+  & input[type="range"]:focus {
+    outline: none;
+  }
+
+  & input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    width: 100%;
+    color: transparent;
+    background: lightgray;
+    border-radius: 999px;
+    height: 20px;
+    border: none;
+    padding: 5px;
+    background: #242424;
+  }
+
+  & input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+    margin-top: -13px;
+    background: url(/rayo.webp);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  & .social-battery-level {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    border: 2px solid #d8c49d;
+    border-radius: 10px;
+    overflow: hidden;
+    top: 0;
+
+    & span {
+      background-color: var(--bg, #242424) ;
+      font-size: 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.social-battery-share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  & .social-battery-share-button {
+    border: 2px solid #d8c49d;
+    border-radius: 10px;
+    background-color: #d8c49d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 10px;
+    cursor: pointer;
+    color: black;
+    transition: filter 0.25s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+
+}
+
+
+
